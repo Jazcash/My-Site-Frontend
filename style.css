@@ -44,16 +44,19 @@ table {
 /*=====================*/
 body{background: #f5f2f5}
 #wrap{
-	max-width: 900px;
-	padding: 5px;
 	margin-left: auto;
 	margin-right: auto;
+	max-width: 900px;
 }
 	#top{
-		width: 90%;
+		max-width: -moz-calc(100% - 80px);
+		max-width: -webkit-calc(100% - 80px);
+		max-width: -o-calc(100% - 80px); 
+		max-width: calc(100% - 80px);
 		height: 125px;
-		min-width: 680px;
 		position: relative;
+		background: green;
+
 	}
 		#siteTitleAlign{
 			height: 100%;
@@ -74,7 +77,7 @@ body{background: #f5f2f5}
 		#titleDivider{
 			background: #e3e0e3;
 			width: 4px;
-			height: 70%;
+			height: 90px;
 			float: right;
 			margin-top: 18px;
 		}
@@ -82,8 +85,10 @@ body{background: #f5f2f5}
 			float: right;
 			height: 100%;
 			display: table;
+			background: orange;
+			
 		}
-			#nav >  li{
+			#nav >  li.page{
 				display: table-cell;
 				vertical-align: middle;
 				padding-right: 30px;
@@ -95,16 +100,19 @@ body{background: #f5f2f5}
 				-o-transition:all .25s ease-in;
 				transition:all .25s ease-in;
 			}
-			#nav > li:hover{
+			#nav > li.page:hover{
 				color: #000;
 			}
-			#nav > li:not(:first-child):before{
+			#nav > li.page:not(:first-child):before{
 				content: "|";
 				color: #999;
 				padding-right: 30px;
 			}
 	#main{
-		width: 90%;
+		width: -moz-calc(100% - 80px);
+		width: -webkit-calc(100% - 80px);
+		width: -o-calc(100% - 80px); 
+		width: calc(100% - 80px);
 		min-height: 500px;
 		float: left;
 	}
@@ -123,8 +131,15 @@ body{background: #f5f2f5}
 				line-height: 1.6rem;
 			}
 	#sidebar{
-		width: 9%;
 		float: left;
 		position: relative;
-		margin-left: 1%;
+		
 	}
+		#sidebar > ul{
+			
+		}
+			#sidebar > ul > li{
+				width: 80px;
+				height: 80px;
+				
+			}
