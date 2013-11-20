@@ -56,7 +56,7 @@ body{background: #f5f2f5}
 		height: 125px;
 		position: relative;
 		background: green;
-
+		
 	}
 		#siteTitleAlign{
 			height: 100%;
@@ -86,7 +86,6 @@ body{background: #f5f2f5}
 			height: 100%;
 			display: table;
 			background: orange;
-			
 		}
 			#nav >  li.page{
 				display: table-cell;
