@@ -42,103 +42,118 @@ table {
 	border-collapse: collapse;
 }
 /*=====================*/
-body{background: #f5f2f5}
+
+/* Wrapper */
+body{background: #eaeaea;}
 #wrap{
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 900px;
+	padding: 0 10px 0 10px;
 }
-	#top{
-		max-width: -moz-calc(100% - 80px);
-		max-width: -webkit-calc(100% - 80px);
-		max-width: -o-calc(100% - 80px); 
-		max-width: calc(100% - 80px);
-		height: 125px;
-		position: relative;
-		background: green;
-		
+/* Header */
+#top{
+	width: -moz-calc(100% - 55px);
+	width: -webkit-calc(100% - 55px);
+	width: -o-calc(100% - 55px); 
+	width: calc(100% - 55px);
+	height: 125px;
+	position: relative;
+}
+	#top > ul{
+		float: right;
 	}
-		#siteTitleAlign{
-			height: 100%;
-			right: 0;
-			display: table;
-			float: right;
-		}
-			#siteTitle{
-				display: table-cell;
-				vertical-align: middle;
-				padding: 0 30px 0 30px;
-				font-size: 1.5rem;
-				font-family: 'Open Sans', sans-serif;
-				font-weight: bold;
-				color: #444;
-				letter-spacing:-1px;
-			}
-		#titleDivider{
-			background: #e3e0e3;
-			width: 4px;
-			height: 90px;
-			float: right;
-			margin-top: 18px;
-		}
-		#nav{
-			float: right;
-			height: 100%;
-			display: table;
-			background: orange;
-		}
-			#nav >  li.page{
-				display: table-cell;
-				vertical-align: middle;
-				padding-right: 30px;
-				font-size: 0.9rem;
-				font-family: 'Raleway';
-				color: #999;
-				-webkit-transition:all .25s ease-in;
-				-moz-transition:all .25s ease-in;
-				-o-transition:all .25s ease-in;
-				transition:all .25s ease-in;
-			}
-			#nav > li.page:hover{
-				color: #000;
-			}
-			#nav > li.page:not(:first-child):before{
-				content: "|";
-				color: #999;
-				padding-right: 30px;
-			}
-	#main{
-		width: -moz-calc(100% - 80px);
-		width: -webkit-calc(100% - 80px);
-		width: -o-calc(100% - 80px); 
-		width: calc(100% - 80px);
-		min-height: 500px;
-		float: left;
+	#top > ul > li{
+		display: inline-block;
+		height: 100%;
 	}
-		.block{
-			width: 100%;
-			background: #fff;
+		#top > ul >  li.page{
+			vertical-align: middle;
+			padding: 0 17px 0 0px;
+			font-size: 0.9rem;
+			font-family: 'Raleway';
+			color: #999;
+			-webkit-transition:all .15s ease-in;
+			-moz-transition:all .15s ease-in;
+			-o-transition:all .15s ease-in;
+			transition:all .15s ease-in;
+			line-height: 125px;
+			margin-top:-11px;
+		}
+		#top > ul > li.page:hover{
+			color: #000;
+		}
+		#top > ul > li.page:not(:first-child):before{
+			content: "|";
+			color: #999;
+			padding-right: 19px;
+		}
+		#top > ul > #siteTitle{
+			padding: 0 30px 0 30px;
+			font-size: 1.5rem;
+			font-family: 'Open Sans', sans-serif;
+			font-weight: bold;
+			color: #444;
+			letter-spacing:-1px;
+			height: 100%;
+			line-height: 125px;
+		}
+			#top > ul > #siteTitle:before{
+				content: "";
+				position: absolute;
+				width: 4px;
+				height:80px;
+				margin-left: -30px;
+				margin-top: 23px;
+				background: #ddd;
+			}
+/* Main & Body */
+#main{
+	width: -moz-calc(100% - 55px);
+	width: -webkit-calc(100% - 55px);
+	width: -o-calc(100% - 55px); 
+	width: calc(100% - 55px);
+	min-width: 200px;
+	min-height: 500px;
+	float: left;
+}
+	.block{
+		width: 100%;
+		background: #fff;
+		margin-bottom: 10px;
+		min-height: 10px;
+		border-bottom: 2px solid #ddd;
+	}
+		.content{
+			padding: 10px;
+			color: #555;
+			font-size: 16px;
+			font-family: 'Open Sans',Lato,sans-serif;
+			line-height: 1.6rem;
+		}
+/* Sidebar */
+#sidebar{
+	float: left;
+	position: relative;
+}
+	#sidebar > ul{
+	}
+		#sidebar > ul > li{
 			margin-bottom: 10px;
-			min-height: 10px;
-			border-bottom: 2px solid #ddd;
 		}
-			.content{
-				padding: 10px;
-				color: #555;
-				font-size: 16px;
-				font-family: 'Open Sans',Lato,sans-serif;
-				line-height: 1.6rem;
+			#sidebar > ul > li > img{
+				/*margin-left: auto;
+				margin-right: auto;*/
+				margin-left: 15px;
+				display: block;
+				max-width: 40px;
+				max-height: 40px;
+				opacity: 0.1;
+				-webkit-transition:all .05s ease-in;
+				-moz-transition:all .05s ease-in;
+				-o-transition:all .05s ease-in;
+				transition:all .05s ease-in;
 			}
-	#sidebar{
-		float: left;
-		position: relative;
-		
-	}
-		#sidebar > ul{
-			
-		}
-			#sidebar > ul > li{
-				width: 80px;
-				height: 80px;
-				
+			#sidebar > ul > li > img:hover{
+				opacity: 0.6;
 			}
