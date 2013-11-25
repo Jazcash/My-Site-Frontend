@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:600);
+/* CSS RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -50,6 +51,8 @@ body{background: #eaeaea;}
 	margin-right: auto;
 	max-width: 900px;
 	padding: 0 10px 0 10px;
+	overflow: hidden;
+	min-width: 300px;
 }
 /* Header */
 #top{
@@ -58,7 +61,6 @@ body{background: #eaeaea;}
 	width: -o-calc(100% - 55px); 
 	width: calc(100% - 55px);
 	height: 125px;
-	position: relative;
 }
 	#top > ul{
 		float: right;
@@ -66,10 +68,11 @@ body{background: #eaeaea;}
 	#top > ul > li{
 		display: inline-block;
 		height: 100%;
+		line-height: 125px;
+		vertical-align: top;
 	}
 		#top > ul >  li.page{
-			vertical-align: middle;
-			padding: 0 17px 0 0px;
+			padding-right:17px;
 			font-size: 0.9rem;
 			font-family: 'Raleway';
 			color: #999;
@@ -77,8 +80,6 @@ body{background: #eaeaea;}
 			-moz-transition:all .15s ease-in;
 			-o-transition:all .15s ease-in;
 			transition:all .15s ease-in;
-			line-height: 125px;
-			margin-top:-11px;
 		}
 		#top > ul > li.page:hover{
 			color: #000;
@@ -86,17 +87,18 @@ body{background: #eaeaea;}
 		#top > ul > li.page:not(:first-child):before{
 			content: "|";
 			color: #999;
-			padding-right: 19px;
+			padding-right: 17px;
+		}
+		#top > ul > li.page:first-child{
+			padding-left: 17px;
 		}
 		#top > ul > #siteTitle{
 			padding: 0 30px 0 30px;
-			font-size: 1.5rem;
+			font-size: 1.5em;
 			font-family: 'Open Sans', sans-serif;
 			font-weight: bold;
 			color: #444;
 			letter-spacing:-1px;
-			height: 100%;
-			line-height: 125px;
 		}
 			#top > ul > #siteTitle:before{
 				content: "";
@@ -114,7 +116,6 @@ body{background: #eaeaea;}
 	width: -o-calc(100% - 55px); 
 	width: calc(100% - 55px);
 	min-width: 200px;
-	min-height: 500px;
 	float: left;
 }
 	.block{
@@ -134,17 +135,14 @@ body{background: #eaeaea;}
 /* Sidebar */
 #sidebar{
 	float: left;
-	position: relative;
 }
 	#sidebar > ul{
+		margin-left: 15px;
 	}
 		#sidebar > ul > li{
 			margin-bottom: 10px;
 		}
 			#sidebar > ul > li > img{
-				/*margin-left: auto;
-				margin-right: auto;*/
-				margin-left: 15px;
 				display: block;
 				max-width: 40px;
 				max-height: 40px;
@@ -157,3 +155,19 @@ body{background: #eaeaea;}
 			#sidebar > ul > li > img:hover{
 				opacity: 0.6;
 			}
+/* Footer */
+#footer{
+	float: left;
+	width: -moz-calc(100% - 55px);
+	width: -webkit-calc(100% - 55px);
+	width: -o-calc(100% - 55px); 
+	width: calc(100% - 55px);
+	text-align: center;
+	background: green;
+	margin-top: -10px;
+}
+	#footer > p{
+		padding: 10px;
+		font-family: 'Open Sans',Lato,sans-serif;
+		font-size: 10px;
+	}
