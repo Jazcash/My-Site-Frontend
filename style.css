@@ -163,7 +163,6 @@ body{background: #eaeaea;}
 	width: -o-calc(100% - 55px); 
 	width: calc(100% - 55px);
 	text-align: center;
-	background: green;
 	margin-top: -10px;
 }
 	#footer > p{
