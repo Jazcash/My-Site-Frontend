@@ -1,5 +1,5 @@
 MySite-v2
 =========
 
-Second (current) version of Jazcash.com
+Second (current) version of my website
 
